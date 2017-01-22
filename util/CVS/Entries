@@ -1,0 +1,26 @@
+/DialogF.c/1.16/Wed Jun  6 10:00:23 2001//
+/DialogF.h/1.4/Mon Feb 26 23:38:03 2001//
+/Makefile.common/1.5/Mon Feb 26 23:38:03 2001//
+/Makefile.dependencies/1.4/Wed Jul 25 07:39:12 2001//
+/comutil.com/1.3/Wed Jul 11 07:55:17 2001//
+/fileUtils.c/1.12/Fri May 11 19:56:19 2001//
+/fileUtils.h/1.4/Fri Apr  6 09:49:56 2001//
+/fontsel.c/1.9/Tue Jul 31 07:40:14 2001//
+/fontsel.h/1.3/Mon Feb 26 23:38:03 2001//
+/getfiles.c/1.14/Tue Jul 31 07:43:30 2001//
+/getfiles.h/1.3/Mon Feb 26 23:38:03 2001//
+/managedList.c/1.5/Tue Jul 31 07:46:42 2001//
+/managedList.h/1.3/Mon Feb 26 23:38:03 2001//
+/misc.c/1.25/Sat Aug  4 20:49:21 2001//
+/misc.h/1.7/Fri Apr 13 17:50:50 2001//
+/prefFile.c/1.8/Wed Jun  6 10:00:23 2001//
+/prefFile.h/1.4/Mon Feb 26 23:38:03 2001//
+/printUtils.c/1.10/Fri Apr 13 17:50:50 2001//
+/printUtils.h/1.4/Fri Apr  6 09:49:56 2001//
+/system.h/1.5/Sat Aug  4 20:23:54 2001//
+/utils.c/1.4/Wed Jul 11 07:55:17 2001//
+/utils.h/1.2/Mon Feb 26 23:38:03 2001//
+/vmsParam.h/1.2/Mon Feb 26 23:38:03 2001//
+/vmsUtils.c/1.4/Tue Jul 17 07:31:58 2001//
+/vmsUtils.h/1.3/Mon Feb 26 23:38:03 2001//
+D

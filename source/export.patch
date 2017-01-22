@@ -1,0 +1,93 @@
+diff -r onedit/README vnedit/README
+1c1,13
+<                     NEdit Version 5.1.1, March 17, 2000
+---
+> NOTE THIS IS NOT AN ORIGINAL VERSION OF NEDIT!!!!!
+> 
+> This version of nedit has been modified by Vincent Filby and can be found
+> at http://www.filbar.org/projects/nedit.  To obtain a copy of the original
+> nedit go to http://www.nedit.org.
+> 
+> This version has been modified to add the ability to export color html from
+> code that has syntax highlighting turned on.
+> 
+> - Vince                    
+> 
+> 
+> 			NEdit Version 5.1.1, March 17, 2000
+Only in vnedit/: file
+diff -r onedit/source/Makefile.common vnedit/source/Makefile.common
+8c8,9
+< 	highlightData.o interpret.o parse.o smartIndent.o regexConvert.o
+---
+> 	highlightData.o interpret.o parse.o smartIndent.o regexConvert.o \
+> 	export.o
+13c14
+< 	$(CC) $(CFLAGS) $(OBJS) ../util/libNUtil.a $(LIBS) -o $@
+---
+> 	$(CC)  $(CFLAGS) $(OBJS) ../util/libNUtil.a $(LIBS) -o $@
+Only in vnedit/source: Makefile.linux
+Only in vnedit/source: export.c
+Only in vnedit/source: export.h
+diff -r onedit/source/file.c vnedit/source/file.c
+1137c1137
+< 	wrapToggle = XtVaCreateManagedWidget("addWrap",
+---
+> 			wrapToggle = XtVaCreateManagedWidget("addWrap",
+1141,1142c1141,1142
+< 		XmNmnemonic, 'A', 0);
+< 	XtAddCallback(wrapToggle, XmNvalueChangedCallback, addWrapCB,
+---
+> 			XmNmnemonic, 'A', 0);
+> 			XtAddCallback(wrapToggle, XmNvalueChangedCallback, addWrapCB,
+1144c1144
+< 	XmStringFree(s1);
+---
+> 			XmStringFree(s1);
+diff -r onedit/source/menu.c vnedit/source/menu.c
+68a69
+> #include "export.h"
+81a83,84
+> static void exportAP(Widget w, XEvent *event, String *args, Cardinal *nArgs);/***/ 
+> 
+355a359
+> 		{"export", exportAP }, 
+537a542,543
+> 		createMenuItem(menuPane, "export", "Export...", 'E',
+> 					doActionCB, "export", SHORT);
+1035a1042,1048
+> 
+> static void exportAP(Widget w, XEvent *event, String *args, Cardinal *nArgs) 
+> {
+> 	export( w, event, args, nArgs );
+>  	
+> }
+> 
+diff -r onedit/source/preferences.c vnedit/source/preferences.c
+27a28
+> #include <stdio.h>
+Only in vnedit/source: tags
+diff -r onedit/source/textDisp.c vnedit/source/textDisp.c
+661c661,662
+<     /* Decide if the horizontal scroll bar needs to be visible */
+---
+>     /* Deci 
+> de if the horizontal scroll bar needs to be visible */
+1729c1730
+<    	style = FILL_MASK;
+---
+>    		style = FILL_MASK;
+1768,1772c1769,1773
+<     	 ((!sel->rectangular &&
+<     	   pos >= sel->start && pos < sel->end) ||
+<     	  (sel->rectangular &&
+<     	   pos >= sel->start && lineStartPos <= sel->end &&
+<      	   dispIndex >= sel->rectStart && dispIndex < sel->rectEnd));
+---
+>          ((!sel->rectangular &&
+>            pos >= sel->start && pos < sel->end) ||
+>           (sel->rectangular &&
+>            pos >= sel->start && lineStartPos <= sel->end &&
+>            dispIndex >= sel->rectStart && dispIndex < sel->rectEnd));
+Only in vnedit/util: Makefile.linux
+Only in vnedit/util: core

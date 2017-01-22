@@ -1,0 +1,14 @@
+# $Id: Makefile.linux,v 1.4 2001/06/06 19:24:58 tringali Exp $
+CC=cc
+AR=ar
+
+# For editres, add -DEDITRES to CFLAGS and -lXmu to LIBS
+# Ensure that the Motif/LessTif headers and libs are found!
+# e.g. you may have to add something like 
+#   -I/usr/lesstif/include  to CFLAGS and
+#   -L/usr/lesstif/lib      to LIBS
+CFLAGS=-O -I/usr/X11R6/include -DUSE_DIRENT -DUSE_LPR_PRINT_CMD
+ARFLAGS=-urs
+LIBS= -L/usr/X11R6/lib -lXm -lXpm -lXext -lXt -lSM -lICE -lX11 -lm
+
+include Makefile.common
